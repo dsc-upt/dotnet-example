@@ -1,6 +1,6 @@
 namespace DotnetExample;
 
-public class WeatherForecast
+public class WeatherForecastModel : Entity
 {
     public DateTime Date { get; set; }
 
