@@ -34,6 +34,24 @@ public class WeatherForecastController : ControllerBase
         });
     }
 
+    [HttpGet("{id}")]
+    public WeatherForecastResponseView Get(int id)
+    {
+        var entity = database.Find(item => item.Id == id);
+        if (entity is null)
+        {
+            throw new ArgumentException("Id not found in DB");
+        }
+
+        return new WeatherForecastResponseView
+        {
+            Id = entity.Id,
+            Date = entity.Date,
+            TemperatureC = entity.TemperatureC,
+            Summary = entity.Summary
+        };
+    }
+
     // these are attributes
     [HttpPost]
     public WeatherForecastResponseView Post(WeatherForecastRequestView entity)
@@ -55,6 +73,26 @@ public class WeatherForecastController : ControllerBase
             Id = weatherForecast.Id,
             Date = weatherForecast.Date,
             TemperatureC = weatherForecast.TemperatureC,
+            Summary = weatherForecast.Summary
+        };
+    }
+
+    [HttpDelete]
+    public WeatherForecastResponseView Delete(int id)
+    {
+        var entity = database.Find(item => item.Id == id);
+        if (entity is null)
+        {
+            throw new ArgumentException("Id not found in DB");
+        }
+
+        database.Remove(entity);
+        return new WeatherForecastResponseView
+        {
+            Id = entity.Id,
+            Date = entity.Date,
+            TemperatureC = entity.TemperatureC,
+            Summary = entity.Summary
         };
     }
 
