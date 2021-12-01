@@ -1,7 +1,9 @@
-namespace DotnetExample;
+namespace DotnetExample.Views;
 
-public class WeatherForecast
+public class WeatherForecastResponseView
 {
+    public int Id { get; set; }
+
     public DateTime Date { get; set; }
 
     public int TemperatureC { get; set; }
