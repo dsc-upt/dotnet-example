@@ -2,7 +2,7 @@
 
 public class WeatherForecastResponseView
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
     
     public DateTime Date { get; set; }
     public int TemperatureC { get; set; }

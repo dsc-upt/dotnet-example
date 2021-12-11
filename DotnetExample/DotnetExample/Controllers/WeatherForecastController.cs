@@ -35,7 +35,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public WeatherForecastResponseView Get(int id)
+    public WeatherForecastResponseView Get(string id)
     {
         var entity = database.Find(item => item.Id == id);
         if (entity is null)
@@ -57,7 +57,7 @@ public class WeatherForecastController : ControllerBase
     {
         var weatherForecast = new WeatherForecastModel
         {
-            Id = Random.Shared.Next(1000000000),
+            Id = Guid.NewGuid().ToString(),
             Created = DateTime.Now,
             Updated = DateTime.Now,
             Date = entity.Date,
@@ -77,7 +77,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpDelete]
-    public WeatherForecastResponseView Delete(int id)
+    public WeatherForecastResponseView Delete(string id)
     {
         var entity = database.Find(item => item.Id == id);
         if (entity is null)
@@ -99,7 +99,7 @@ public class WeatherForecastController : ControllerBase
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecastModel
             {
-                Id = Random.Shared.Next(1000000000),
+                Id = Guid.NewGuid().ToString(),
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
