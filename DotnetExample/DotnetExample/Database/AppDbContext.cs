@@ -1,3 +1,4 @@
+using DotnetExample.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotnetExample.Database;
@@ -7,4 +8,7 @@ public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions options) : base(options)
     {}
+
+    // DbSet => reprezentarea unui tabel
+    public DbSet<User> Users { get; set; }
 }
