@@ -11,4 +11,5 @@ public class AppDbContext : DbContext
 
     // DbSet => reprezentarea unui tabel
     public DbSet<User> Users { get; set; }
+    public DbSet<Car> Cars { get; set; }
 }
