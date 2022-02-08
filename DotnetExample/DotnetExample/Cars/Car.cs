@@ -1,4 +1,6 @@
-namespace DotnetExample.Models;
+using DotnetExample.Users;
+
+namespace DotnetExample.Cars;
 
 public class Car : Entity
 {

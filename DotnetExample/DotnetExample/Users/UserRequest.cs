@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DotnetExample.Views;
+namespace DotnetExample.Users;
 
 public class UserRequest
 {

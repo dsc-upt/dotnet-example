@@ -1,10 +1,9 @@
+using DotnetExample.Cars;
 using DotnetExample.Database;
-using DotnetExample.Models;
-using DotnetExample.Views;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotnetExample.Controllers;
+namespace DotnetExample.Users;
 
 [ApiController]
 [Route("api/users")]

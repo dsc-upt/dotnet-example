@@ -1,8 +1,6 @@
-using DotnetExample.Models;
-using DotnetExample.Views;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DotnetExample.Controllers;
+namespace DotnetExample.WeatherForecast;
 
 [ApiController]
 [Route("[controller]")]

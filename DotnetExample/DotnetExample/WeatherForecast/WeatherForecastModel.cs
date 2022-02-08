@@ -1,4 +1,4 @@
-namespace DotnetExample.Models;
+namespace DotnetExample.WeatherForecast;
 
 public class WeatherForecastModel : Entity
 {

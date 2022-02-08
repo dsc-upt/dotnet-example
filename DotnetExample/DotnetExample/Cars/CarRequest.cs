@@ -1,4 +1,4 @@
-namespace DotnetExample.Views;
+namespace DotnetExample.Cars;
 
 public class CarRequest
 {

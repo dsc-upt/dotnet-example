@@ -1,4 +1,5 @@
-using DotnetExample.Models;
+using DotnetExample.Cars;
+using DotnetExample.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotnetExample.Database;
