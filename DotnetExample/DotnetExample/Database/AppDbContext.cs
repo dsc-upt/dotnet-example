@@ -1,4 +1,5 @@
 using DotnetExample.Cars;
+using DotnetExample.Teams;
 using DotnetExample.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,4 +14,5 @@ public class AppDbContext : DbContext
     // DbSet => reprezentarea unui tabel
     public DbSet<User> Users { get; set; }
     public DbSet<Car> Cars { get; set; }
+    public DbSet<Team> Teams { get; set; }
 }

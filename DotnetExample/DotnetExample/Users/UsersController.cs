@@ -17,6 +17,12 @@ public class UsersController : ControllerBase
         _dbContext = dbContext;
     }
 
+    [HttpGet]
+    public async Task<List<User>> Get()
+    {
+        return await _dbContext.Users.ToListAsync();
+    }
+
     [HttpPost]
     public async Task<User> Post(UserRequest entity)
     {
